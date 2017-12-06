@@ -44,7 +44,8 @@ class Test2Skill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				#GPIO.set("GPIO4","Off")
 				try:
-					mycroft.util.wait_while_speaking()
+					#mycroft.util.wait_while_speaking()
+					a = 0
                 except:
                 	time.sleep(5)
 				#	pass
