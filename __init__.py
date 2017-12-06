@@ -2,7 +2,7 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
-import mycroft.audio
+import mycroft.util
 import time
 import requests
 import json
@@ -44,7 +44,7 @@ class Test2Skill(MycroftSkill):
 				GPIO.set("GPIO3","Off")
 				#GPIO.set("GPIO4","Off")
 				try:
-					mycroft.audio.wait_while_speaking()
+					mycroft.util.wait_while_speaking()
                 except:
                 	time.sleep(5)
 				#	pass
