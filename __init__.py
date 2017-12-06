@@ -2,8 +2,8 @@
 # This file is part of the Villanova tour guide mrcroft skill
 from os.path import dirname
 
-#import mycroft.audio
-#import time
+import mycroft.audio
+import time
 import requests
 import json
 import threading
@@ -33,29 +33,29 @@ class Test2Skill(MycroftSkill):
 				# ---------------------------------------------------------------------------------
 
 		def handle_blueberry_intent(self, message):
-				GPIO.set("GPIO1","Off")
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","On")
-				GPIO.set("GPIO4","Off")
+				#GPIO.set("GPIO1","Off")
+				#GPIO.set("GPIO2","Off")
+				#GPIO.set("GPIO3","On")
+				#GPIO.set("GPIO4","Off")
 				self.speak_dialog("blueberry")
-				time.sleep(1) 									#I put the V eyes here
-				GPIO.set("GPIO1","Off")
-				GPIO.set("GPIO2","On")
-				GPIO.set("GPIO3","Off")
-				GPIO.set("GPIO4","Off")
-				try:
-					mycroft.audio.wait_while_speaking()
-                except:
-                	time.sleep(5)
-                	GPIO.set("GPIO1","Off")
-					GPIO.set("GPIO2","Off")
-					GPIO.set("GPIO3","Off")
-					GPIO.set("GPIO4","On")
-					pass
-				GPIO.set("GPIO1","Off")
-				GPIO.set("GPIO2","Off")
-				GPIO.set("GPIO3","Off")
-				GPIO.set("GPIO4","On")
+				#time.sleep(1) 									#I put the V eyes here
+				#GPIO.set("GPIO1","Off")
+				#GPIO.set("GPIO2","On")
+				#GPIO.set("GPIO3","Off")
+				#GPIO.set("GPIO4","Off")
+				#try:
+				#	mycroft.audio.wait_while_speaking()
+                #except:
+               # 	time.sleep(5)
+                #	GPIO.set("GPIO1","Off")
+				#	GPIO.set("GPIO2","Off")
+				#	GPIO.set("GPIO3","Off")
+				#	GPIO.set("GPIO4","On")
+				#	pass
+				#GPIO.set("GPIO1","Off")
+				#GPIO.set("GPIO2","Off")
+				#GPIO.set("GPIO3","Off")
+				#GPIO.set("GPIO4","On")
 				
 		def stop(self):
 				pass
