@@ -43,16 +43,16 @@ class Test2Skill(MycroftSkill):
 				GPIO.set("GPIO2","On")
 				GPIO.set("GPIO3","Off")
 				#GPIO.set("GPIO4","Off")
-				try:
-					#mycroft.util.wait_while_speaking()
-					a = 0
-                except:
+				#try:
+				mycroft.util.wait_while_speaking()
+				#	a = 0
+                #except:
                 	time.sleep(5)
 				#	pass
-				#GPIO.set("GPIO1","Off")
-				#GPIO.set("GPIO2","Off")
-				#GPIO.set("GPIO3","Off")
-				#GPIO.set("GPIO4","On")
+				GPIO.set("GPIO1","Off")
+				GPIO.set("GPIO2","Off")
+				GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO4","On")
 				
 		def stop(self):
 				pass
