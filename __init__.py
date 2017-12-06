@@ -61,4 +61,4 @@ class Test2Skill(MycroftSkill):
 				pass
 
 def create_skill():
-		return TourGuideSkill()
+		return Test2Skill()
