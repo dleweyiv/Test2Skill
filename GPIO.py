@@ -11,12 +11,6 @@ try:
 except:
     pi_interface = False
     pass
-
-
-blink_active = False
-"""bool: to controll weather blink continues to be active
-This will not start the blinking it will only be important once blinking
-has started.  This is currently only used in testing.
 """
 
 GPIO_STATE = {}
@@ -30,16 +24,6 @@ These functions will be called when the GPIO is changed in any way.
 
 is_imported = True
 """Used as a flag to show that GPIO was imported"""
-
-def ButtonHandeler(channel):
-    """This handels the button press and sets the state
-    Args:
-        channel(int):  The RPi GPIO channel used for monitoring the button
-    """
-    if GPIO.input(channel) == GPIO.HIGH:
-        set("Button","Pressed")
-    else:
-        set("Button","Released")
 
 """This is the setup for the RPi GPIO"""
 if pi_interface:
@@ -98,7 +82,7 @@ def on(key,function):
 
 def json():
     """Returns a json object of the GPIO info"""
-    return json.dumps(GPIO_STATE)
+    #return json.dumps(GPIO_STATE)
 
 
 if __name__=="__main__":
