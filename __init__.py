@@ -38,10 +38,10 @@ class Test2Skill(MycroftSkill):
 				GPIO.set("GPIO3","On")
 				GPIO.set("GPIO4","Off")
 				self.speak_dialog("blueberry")
-				#time.sleep(1) 									#I put the V eyes here
+				time.sleep(1) 									#I put the V eyes here
 				#GPIO.set("GPIO1","Off")
-				#GPIO.set("GPIO2","On")
-				#GPIO.set("GPIO3","Off")
+				GPIO.set("GPIO2","On")
+				GPIO.set("GPIO3","Off")
 				#GPIO.set("GPIO4","Off")
 				#try:
 			#		mycroft.audio.wait_while_speaking()
